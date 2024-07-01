@@ -1,6 +1,4 @@
 # Table of contents
 
-* [Cách tạo AutoText giúp soạn thảo văn bản nhanh trong Word](README.md)
-* [Cách chuyển văn bản thành bảng trong Word và ngược lại](cach-chuyen-van-ban-thanh-bang-trong-word-va-nguoc-lai.md)
-* [10 biểu đồ Excel nâng cao ai cũng cần biết](10-bieu-do-excel-nang-cao-ai-cung-can-biet.md)
-* [Cách cố định dòng và cố định cột trong Excel](cach-co-dinh-dong-va-co-dinh-cot-trong-excel.md)
+* [Cùng học GenAI Phần 1: Các khái niệm cơ bản về GenAI, LLM, cách hoạt động, train, các giới hạn,...](README.md)
+* [Cùng học GenAI Phần 2: Chi tiết về Prompt, cách một LLM chạy, phân loại prompt theo dạng thông tin](cung-hoc-genai-phan-2-chi-tiet-ve-prompt-cach-mot-llm-chay-phan-loai-prompt-theo-dang-thong-tin.md)
