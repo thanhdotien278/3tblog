@@ -1,8 +1,7 @@
 # Hướng dẫn prompt từ cơ bản đến nâng cao P5: bản chất của model reasoning và dùng AI viết prompt AI
 
 Sau khi đi qua các kỹ thuật prompt từ cơ bản như zero-shot, few-shot, cho tới các kỹ thuật role prompt, contextual, system prompt, rồi nâng cao lên với Chain of thought hay Tree of thought để giải quyết vấn đề thì tiếp theo, chúng ta sẽ đẩy kỹ thuật xài prompt tiến thêm một bước nữa là tương tác với những thứ bên ngoài LLM như tìm kiếm, xài API hoặc tự động hóa để khai thác nhiều hơn sức mạnh từ AI nói riêng và AI nói chung. Trong bài viết này xin chia sẻ với các bạn về khía cạnh đó khi prompt.\
-\
-
+<br>
 
 ### ReAct - tiền đề của Deep Research, AI Agents,… <a href="#menuid0" id="menuid0"></a>
 
@@ -15,8 +14,7 @@ Khi người dùng nhập prompt với kỹ thuật ReAct vào, model sẽ "suy 
 \
 ![Screenshot 2025-06-17 083103.png](https://photo2.tinhte.vn/data/attachment-files/2025/06/8758080_Screenshot_2025-06-17_083103.png)\
 \
-Một thí dụ đơn giản, khi người dùng muốn tìm hiểu "Ban nhạc Metallica có bao nhiêu đứa con", Ai không biết câu trả lời và nó sẽ làm theo các bước ReAct gồm:\
-
+Một thí dụ đơn giản, khi người dùng muốn tìm hiểu "Ban nhạc Metallica có bao nhiêu đứa con", Ai không biết câu trả lời và nó sẽ làm theo các bước ReAct gồm:<br>
 
 * Thought (Suy nghĩ): "Mình cần biết Metallica có bao nhiêu thành viên trước đã."
 * Action (Hành động): dùng công cụ tìm kiếm để tra cứu thông tin về ban nhạc Metallica.
@@ -32,8 +30,7 @@ Một thí dụ đơn giản, khi người dùng muốn tìm hiểu "Ban nhạc 
 Có thể thấy, ReAct sẽ cố gắng bắt chước cách con người hoạt động trong thế giới ngoài đời thực, nơi chúng ta lý luận bằng lời nói và có thể thực hiện các hành động để thu thập thông tin. ReAct sẽ được dùng trong các tình huống mà lượng data chứa trong LLM không còn đủ để đáp ứng nhu cầu của tác vụ, cần phải lấy thêm thông tin từ bên ngoài hoặc cần phải gọi các công cụ, các API, cần lấy data realtime,…\
 \
 Bởi thế, ReAct không hẳn là một hay vài prompt mà có thể hiểu rộng ra là một cách hình thành nên workflow để xử lý một tác vụ, khi đó chúng ta sẽ kết hợp prompt khi giao tiếp với LLM, [agent AI](https://tinhte.vn/tag/agent-ai) và gợi ý / thiết lập cho AI các tools mà nó cần xài để hoàn thành nhiệm vụ àm chúng ta muốn. Việc áp dụng ReAct sẽ không chỉ định hướng AI làm việc đúng ý chúng ta, hướng tới automation àm còn giúp giảm ảo giác hallucianation, cung cấp thông tin được update liên tục,…\
-\
-
+<br>
 
 ### Prompt tự động - Automatic Prompt Engineering - APE <a href="#menuid1" id="menuid1"></a>
 

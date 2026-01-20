@@ -10,3 +10,5 @@
 * [Hướng dẫn prompt từ cơ bản đến nâng cao P3: step-back prompting và Chain of Thought (CoT)](huong-dan-prompt-tu-co-ban-den-nang-cao-p3-step-back-prompting-va-chain-of-thought-cot.md)
 * [Hướng dẫn prompt từ cơ bản đến nâng cao P4: Self-consistency và ToT để giải quyết các task phức tạp](huong-dan-prompt-tu-co-ban-den-nang-cao-p4-self-consistency-va-tot-de-giai-quyet-cac-task-phuc-tap.md)
 * [Hướng dẫn prompt từ cơ bản đến nâng cao P5: bản chất của model reasoning và dùng AI viết prompt AI](huong-dan-prompt-tu-co-ban-den-nang-cao-p5-ban-chat-cua-model-reasoning-va-dung-ai-viet-prompt-ai.md)
+* [Prompts tạo presentations](prompts-tao-presentations.md)
+* [Prompts để kiểm chứng thông tin](prompts-de-kiem-chung-thong-tin.md)
