@@ -12,3 +12,4 @@
 * [Hướng dẫn prompt từ cơ bản đến nâng cao P5: bản chất của model reasoning và dùng AI viết prompt AI](huong-dan-prompt-tu-co-ban-den-nang-cao-p5-ban-chat-cua-model-reasoning-va-dung-ai-viet-prompt-ai.md)
 * [Prompts tạo presentations](prompts-tao-presentations.md)
 * [Prompts để kiểm chứng thông tin](prompts-de-kiem-chung-thong-tin.md)
+* [Research Claw](research-claw.md)
