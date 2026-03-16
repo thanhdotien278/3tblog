@@ -4,8 +4,9 @@
 
 Vì bạn đã cài đặt mã nguồn vào thư mục `/Users/Super/.gemini/antigravity/scratch/AutoResearchClaw`, hãy di chuyển vào thư mục này và kích hoạt môi trường ảo:
 
-```
-bashcd /Users/Super/.gemini/antigravity/scratch/AutoResearchClawsource .venv/bin/activate
+```bash
+cd /Users/Super/.gemini/antigravity/scratch/AutoResearchClaw
+source .venv/bin/activate
 ```
 
 _(Lưu ý: Bạn luôn cần chạy `source .venv/bin/activate` mỗi khi mở terminal mới để sử dụng lệnh `researchclaw`)_.
@@ -19,19 +20,33 @@ Mở file `config.arc.yaml` lên (hoặc dùng text editor yêu thích của b�
 **1. Khai báo LLM API (Bắt buộc):** Mặc định hệ thống dùng định dạng API tương tự OpenAI. Bạn có thể dùng OpenAI, Claude, hoặc bất kỳ provider nào hỗ trợ chuẩn này.
 
 ```
-yamlllm:  provider: "openai-compatible"      base_url: "https://api.openai.com/v1"  # Thay đổi URL nếu bạn dùng hãng khác (ví dụ: OpenRouter)  api_key_env: "OPENAI_API_KEY"          # Biến môi trường chứa API Key  primary_model: "gpt-4o"                # Model chính (ưu tiên model xịn nhất)  fallback_models: ["gpt-4o-mini"]       # Model dự phòng nếu lỗi
+llm:
+  provider: "openai-compatible"    
+  base_url: "https://api.openai.com/v1"  # Thay đổi URL nếu bạn dùng hãng khác (ví dụ: OpenRouter)
+  api_key_env: "OPENAI_API_KEY"          # Biến môi trường chứa API Key
+  primary_model: "gpt-4o"                # Model chính (ưu tiên model xịn nhất)
+  fallback_models: ["gpt-4o-mini"]       # Model dự phòng nếu lỗi
 ```
 
 **2. Khai báo Chủ đề nghiên cứu (Research Topic):**
 
 ```
-yamlproject:  name: "project-nghien-cuu-cua-toi"  # Tên project lưu trữ kết quả  research:  topic: "Cải thiện độ chính xác của mô hình Transformer trong nhận dạng giọng nói tiếng Việt sử dụng cơ chế chú ý cục bộ"   domains: ["ml", "nlp", "speech"]    # Lĩnh vực nghiên cứu
+project:
+  name: "project-nghien-cuu-cua-toi"  # Tên project lưu trữ kết quả
+  
+research:
+  topic: "Cải thiện độ chính xác của mô hình Transformer trong nhận dạng giọng nói tiếng Việt sử dụng cơ chế chú ý cục bộ" 
+  domains: ["ml", "nlp", "speech"]    # Lĩnh vực nghiên cứu
 ```
 
 **3. Thiết lập Môi trường chạy Code (Thực nghiệm):** Để an toàn, hệ thống mặc định chạy code sinh ra trong sandbox.
 
 ```
-yamlexperiment:  mode: "sandbox"                       # Có thể đổi thành "docker" nếu bạn đã cài Docker  time_budget_sec: 300                  # Thời gian tối đa chạy code thử nghiệm  sandbox:    python_path: ".venv/bin/python"     # Trỏ vào môi trường ảo hiện tại
+experiment:
+  mode: "sandbox"                       # Có thể đổi thành "docker" nếu bạn đã cài Docker
+  time_budget_sec: 300                  # Thời gian tối đa chạy code thử nghiệm
+  sandbox:
+    python_path: ".venv/bin/python"     # Trỏ vào môi trường ảo hiện tại
 ```
 
 #### Bước 3: Cung cấp API Key vào Terminal <a href="#user-content-buoc-3-cung-cap-api-key-vao-terminal" id="user-content-buoc-3-cung-cap-api-key-vao-terminal"></a>
@@ -49,7 +64,9 @@ _(Nếu bạn dùng Semantic Scholar API để lấy bài báo nhanh hơn, bạn
 Sử dụng lệnh sau để bắt đầu tiến trình 23 bước tự động:
 
 ```
-bashresearchclaw run --config config.arc.yaml \                 --topic "Bạn có thể ghi đè chủ đề vào đây hoặc bỏ qua cờ này để dùng topic trong file config" \                 --auto-approve
+researchclaw run --config config.arc.yaml \
+                 --topic "Bạn có thể ghi đè chủ đề vào đây hoặc bỏ qua cờ này để dùng topic trong file config" \
+                 --auto-approve
 ```
 
 _Lưu ý về cờ `--auto-approve`: Nếu không có cờ này, hệ thống sẽ dừng lại ở 3 "Quality Gate" (Cổng kiểm duyệt ở cuối giai đoạn Tìm kiếm tài liệu, Thiết kế thực nghiệm, và Đánh giá cuối) để hỏi ý kiến bạn. Dùng cờ này để hệ thống chạy 1 mạch 100% tự động định tuyến lại khi lỗi._
